@@ -4,22 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Esempio</title>
+    <link rel="stylesheet" href="./css/app.css">
 </head>
 <body>
-    <form id="myForm">
-        <label for="km">Inserisci i chilometri</label>
-        <input type="text" id="km" name="km" required>
-        
-        <label for="eta">Inserisci la tua età</label>
-        <select name="eta" id="eta" form="ageform">
-        <option value="minorenne">empty</option>
-        <option value="minorenne">Minorenne</option>
-        <option value="maggiorenne">Maggiorene</option>
-        <option value="oversessanta">Oversessanta</option>
-        </select>
+    <nav>
+    
+        <a href="">Home</a>
+        <a href="">Info</a>
+        <a href="">Prenota il tuo viaggio</a>
+        <a href="">Assistenza</a>
+    </nav>
 
-        <button type="submit">Invia</button>
-    </form>
+    <section class="hero">
+        <img src="./img/logo.png" alt="" class="size-img">
+        <h2>FERROVIA 133</h2>
+        <div class="form-style">
+            <form id="myForm">
+                <label for="name"><p class="el-center form-te">Inserisci i nome:</p></label>
+                <input type="text" id="name" name="name" required>
+                <label for="surname"><p class="el-center form-te">Inserisci il cognome:</p></label>
+                <input type="text" id="surname" name="surname" required>
+                <label for="km"><p class="el-center form-te">Inserisci i chilometri:</p></label>
+                <input type="text" id="km" name="km" required>
+                <label for="eta"><p class="el-center form-te">Inserisci la tua età:</p></label>
+                <select name="eta" id="eta" form="ageform">
+                <option value="minorenne">empty</option>
+                <option value="minorenne">Minorenne</option>
+                <option value="maggiorenne">Maggiorene</option>
+                <option value="oversessanta">Oversessanta</option>
+                </select>
+        
+                <button type="submit">Invia</button>
+            </form>
+        </div>
+    </section>
 
     <script src="./js/app.js"></script>
 </body>

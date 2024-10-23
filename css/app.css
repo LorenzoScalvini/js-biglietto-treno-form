@@ -1,0 +1,62 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+    @import url('https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap');
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+    cursor: inherit;
+  }
+
+ul,
+ol {
+	list-style: none;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+nav {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 4rem;
+    background-color: #514030;
+}
+
+p {
+    
+}
+
+label {
+    color: aliceblue;
+}
+
+/* UTILITIES */
+.el-align {
+    display: block;
+    text-align: center;
+}
+
+.form-style {
+    display: flex;
+    justify-content: center;
+    background-color:#514030;
+    padding: 4rem;
+}
+
+.size-img {
+    width: 100px;
+}
