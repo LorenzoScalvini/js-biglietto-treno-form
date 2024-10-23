@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Esempio</title>
+</head>
+<body>
+    <form id="myForm">
+        <label for="km">Inserisci i chilometri</label>
+        <input type="text" id="km" name="km" required>
+        
+        <label for="eta">Inserisci la tua età</label>
+        <select name="eta" id="eta" form="ageform">
+        <option value="minorenne">empty</option>
+        <option value="minorenne">Minorenne</option>
+        <option value="maggiorenne">Maggiorene</option>
+        <option value="oversessanta">Oversessanta</option>
+        </select>
+
+        <button type="submit">Invia</button>
+    </form>
+
+    <script src="./js/app.js"></script>
+</body>
+</html>
