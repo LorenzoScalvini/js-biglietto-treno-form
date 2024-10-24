@@ -1,7 +1,7 @@
 // Aggiungi un event listener al modulo con ID "myForm" per l'evento "submit"
 document.getElementById("myForm").addEventListener("submit", function (event) {
   event.preventDefault(); // Impedisce il comportamento predefinito del modulo (invio della pagina)
-
+ 
   // Richiesta nome e cognome
   const name = document.getElementById("name").value; // Recupera il valore dell'input per il nome
   const surname = document.getElementById("surname").value; // Recupera il valore dell'input per il cognome
