@@ -1,103 +1,96 @@
 <!DOCTYPE html>
-<html lang="it"> 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, content="width=device-width, initial-scale=1.0">
-    <title>Biglietto</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/app.css">
-</head>
-<body class="bg-app">
-
-    
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand title-size" href="#"><img src="./img/logo.png" alt="Logo" width="30" class="d-inline-block align-text-top img-size"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  What we offer
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">boh</a></li>
-                  <li><a class="dropdown-item" href="#">non</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">lo</a></li>
-                  <li><a class="dropdown-item" href="#">so</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">help</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success el-color-main" type="submit">Search</button>
-            </form>
-          </div>
-        </div>
-      </nav>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biglietto Treno</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --trenitalia-red: #d40511;
+        --trenitalia-green: #008248;
+        --trenitalia-white: #ffffff;
+      }
+      body {
+        background-color: var(--trenitalia-white);
+        color: var(--trenitalia-green);
+      }
+      .navbar {
+        background-color: var(--trenitalia-red) !important;
+      }
+      .btn-primary {
+        background-color: var(--trenitalia-green);
+        border: none;
+      }
+      .btn-primary:hover {
+        background-color: #006837;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Biglietto Treno</a>
+      </div>
+    </nav>
 
     <div class="container mt-5">
-        <h2 class="text-center">Calcolo Biglietto</h2>
-        <form id="myForm" class="bg-white p-4 rounded shadow">
-            <div class="mb-3">
-                <label for="name" class="form-label">Nome</label>
-                <input type="text" id="name" class="form-control" placeholder="Inserisci il tuo nome" required>
-            </div>
-            <div class="mb-3">
-                <label for="surname" class="form-label">Cognome</label>
-                <input type="text" id="surname" class="form-control" placeholder="Inserisci il tuo cognome" required>
-            </div>
-            <div class="mb-3">
-                <label for="km" class="form-label">Chilometri</label>
-                <input type="number" id="km" class="form-control" placeholder="Inserisci i chilometri" required>
-            </div>
-            <div class="mb-3">
-                <label for="eta" class="form-label">Età</label>
-                <select id="eta" class="form-select" required>
-                    <option value="minorenne">Minorenne</option>
-                    <option value="adulto">Adulto</option>
-                    <option value="oversessanta">Over 65</option>
-                </select>
-            </div>
-            <button type="submit" class="btn btn-primary el-color-main">Calcola Prezzo</button>
-            <button type="button" id="cancel" class="btn btn-secondary">Annulla</button>
-        </form>
-
-        <div id="output" class="mt-4">
-            <h4 class="text-center" id="ticketTitle" style="display: none;">Dettagli Biglietto</h4>
-            <table class="table table-bordered ticket-style" id="resultTable" style="display: none;">
-                <thead class="table-light ticket-style">
-                    <tr>
-                        <th>Nome</th>
-                        <th>Cognome</th>
-                        <th>Chilometri</th>
-                        <th>Età</th>
-                        <th>Prezzo Finale</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td id="buyer-name"></td>
-                        <td id="buyer-surname"></td>
-                        <td id="buyer-km"></td>
-                        <td id="buyer-age"></td>
-                        <td id="price"></td>
-                    </tr>
-                </tbody>
-            </table>
+      <h2 class="text-center">Calcolo Biglietto</h2>
+      <form id="myForm" class="bg-white p-4 rounded shadow">
+        <div class="mb-3">
+          <label for="name" class="form-label">Nome</label>
+          <input type="text" id="name" class="form-control" required />
         </div>
+        <div class="mb-3">
+          <label for="surname" class="form-label">Cognome</label>
+          <input type="text" id="surname" class="form-control" required />
+        </div>
+        <div class="mb-3">
+          <label for="km" class="form-label">Chilometri</label>
+          <input type="number" id="km" class="form-control" required />
+        </div>
+        <div class="mb-3">
+          <label for="eta" class="form-label">Età</label>
+          <select id="eta" class="form-select" required>
+            <option value="minorenne">Minorenne</option>
+            <option value="adulto">Adulto</option>
+            <option value="oversessanta">Over 65</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Calcola Prezzo</button>
+        <button type="button" id="cancel" class="btn btn-secondary">
+          Annulla
+        </button>
+      </form>
+
+      <div id="output" class="mt-4" style="display: none">
+        <h4 class="text-center">Dettagli Biglietto</h4>
+        <table class="table table-bordered">
+          <thead class="table-light">
+            <tr>
+              <th>Nome</th>
+              <th>Cognome</th>
+              <th>Chilometri</th>
+              <th>Età</th>
+              <th>Prezzo Finale</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="buyer-name"></td>
+              <td id="buyer-surname"></td>
+              <td id="buyer-km"></td>
+              <td id="buyer-age"></td>
+              <td id="price"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
     <script src="./js/app.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
-
